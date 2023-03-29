@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clock {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+
+</body>
+<script>
+    function updateClock() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var timeString = hours + ':' + minutes + ':' + seconds;
+  document.getElementById('clock').innerHTML = timeString;
+}
+
+setInterval(updateClock, 1000);
+
+</script>
+</html>
